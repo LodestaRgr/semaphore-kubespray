@@ -1,6 +1,6 @@
 {
     "cluster_name": "kube-dev",
-    "kube_version": "v2.26.0",
+    "kube_version": "v1.31.2",
     "registry_enabled": "true",
     "metrics_server_enabled": "true",
     "local_path_provisioner_enabled": "true",
