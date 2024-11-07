@@ -1,0 +1,59 @@
+{
+    "mysql": {
+        "host": "${SEMAPHORE_DB_HOST}:${SEMAPHORE_DB_PORT}",
+        "user": "${SEMAPHORE_DB_USER}",
+        "pass": "${SEMAPHORE_DB_PASS}",
+        "name": "${SEMAPHORE_DB}",
+        "options": null
+    },
+    "bolt": {
+        "host": "",
+        "user": "",
+        "pass": "",
+        "name": "",
+        "options": null
+    },
+    "postgres": {
+        "host": "",
+        "user": "",
+        "pass": "",
+        "name": "",
+        "options": null
+    },
+    "dialect": "${SEMAPHORE_DB_DIALECT}",
+    "port": "",
+    "interface": "",
+    "tmp_path": "${SEMAPHORE_PLAYBOOK_PATH}",
+    "cookie_hash": "SPDKU8T8o90gJxi1hMIRHxgXZSBZNr12bs6DGZzRWQk=",
+    "cookie_encryption": "V0y59iq5R+0gcArR2bLiIHCPxom3QrjU9Z2I0uL5E8s=",
+    "access_key_encryption": "${SEMAPHORE_ACCESS_KEY_ENCRYPTION}",
+    "email_sender": "",
+    "email_host": "",
+    "email_port": "",
+    "email_username": "",
+    "email_password": "",
+    "web_host": "",
+    "ldap_binddn": "${SEMAPHORE_LDAP_DN_BIND}",
+    "ldap_bindpassword": "${SEMAPHORE_LDAP_PASSWORD}",
+    "ldap_server": "${SEMAPHORE_LDAP_HOST}:${SEMAPHORE_LDAP_PORT}",
+    "ldap_searchdn": "${SEMAPHORE_LDAP_DN_SEARCH}",
+    "ldap_searchfilter": "${SEMAPHORE_LDAP_SEARCH_FILTER}",
+    "ldap_mappings": {
+        "dn": "${SEMAPHORE_LDAP_MAPPING_DN}",
+        "mail": "${SEMAPHORE_LDAP_MAPPING_MAIL}",
+        "uid": "${SEMAPHORE_LDAP_MAPPING_UID}",
+        "cn": "${SEMAPHORE_LDAP_MAPPING_CN}"
+    },
+    "ldap_enable": ${SEMAPHORE_LDAP_ENABLE},
+    "ldap_needtls": ${SEMAPHORE_LDAP_NEEDTLS},
+    "telegram_chat": "",
+    "telegram_token": "",
+    "slack_url": "",
+    "max_parallel_tasks": 0,
+    "email_alert": false,
+    "email_secure": false,
+    "telegram_alert": false,
+    "slack_alert": false,
+    "ssh_config_path": "",
+    "demo_mode": false
+}
