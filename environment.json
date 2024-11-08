@@ -6,6 +6,7 @@
     "local_path_provisioner_enabled": "true",
     "ingress_nginx_enabled": "true",
     "metallb_enabled": "true",
+    "metallb_namespace": "metallb-system",
     "metallb_config": {
       "address_pools": {
         "primary": {
