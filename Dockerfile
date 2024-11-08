@@ -4,7 +4,7 @@ FROM python:3.10.15-slim-bullseye
 WORKDIR /semaphore
 
 # Install required packages
-RUN apt-get -y update && apt-get -y install git wget gettext
+RUN apt-get -y update && apt-get -y install git wget gettext sshpass
 # Install Ansible
 RUN git clone https://github.com/kubernetes-sigs/kubespray /tmp/kubespray
 RUN cd /tmp/kubespray && pip install -U -r requirements.txt
