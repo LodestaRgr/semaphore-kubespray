@@ -1,0 +1,35 @@
+services:
+  semaphore-kubespsray:
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    build:
+      context: .
+    image: semaphore-kubespsray:1.0
+    container_name: semaphore-kubespsray
+    volumes:
+      - semaphore-data:/var/lib/semaphore
+    env_file:
+      - .env
+    depends_on:
+      mysql:
+        condition: service_healthy
+        restart: true
+
+  mysql:
+    restart: unless-stopped
+    image: mysql:8.0
+    hostname: mysql
+    volumes:
+      - semaphore-mysql:/var/lib/mysql
+    env_file:
+      - .env
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "$MYSQL_USER", "-p$MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+volumes:
+  semaphore-mysql:
+  semaphore-data:
