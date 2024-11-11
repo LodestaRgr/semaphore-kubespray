@@ -8,6 +8,7 @@ RUN apt-get -y update && apt-get -y install git wget gettext sshpass
 # Install Ansible
 RUN git clone https://github.com/kubernetes-sigs/kubespray /tmp/kubespray
 RUN cd /tmp/kubespray && pip install -U -r requirements.txt
+RUN cd /tmp/kubespray && pip install pywinrm pypsrp
 # Download and install semaphore
 RUN cd /tmp && wget https://github.com/ansible-semaphore/semaphore/releases/\
 download/v2.10.35/semaphore_2.10.35_linux_amd64.deb
