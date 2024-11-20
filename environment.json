@@ -5,6 +5,8 @@
     "metrics_server_enabled": "true",
     "local_path_provisioner_enabled": "true",
     "ingress_nginx_enabled": "true",
+    "ingress_nginx_host_network": "true",
+    "dashboard_enabled": "true",
     "metallb_enabled": "true",
     "metallb_namespace": "metallb-system",
     "metallb_config": {
